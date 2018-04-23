@@ -1,0 +1,153 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden !important;
+}
+
+/* sky-color:
+  #4C0A51 - #291038 radial
+
+  rgb(40,70,244), rbg(0,141,244), rgb(255, 0, 49);
+*/
+
+#corpo{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#click{
+  position: absolute;
+  z-index: 3001;
+  margin: 30px;
+
+}
+
+#middle-earth{
+  position: relative;
+  height: 100%;
+  height: 300%;
+  background: black;
+}
+.clouds{
+  width: inherit;
+  height: inherit;
+}
+
+.cloud{
+  background: url('imgs/cloud.svg') no-repeat;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  transform: scale(10);
+}
+
+.spot{
+  border-radius: 50%;
+  background: white;
+  z-index: 2001;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+.pointc{
+  width: 10px;
+  height: 10px;
+  position: relative;
+  background: black;
+  border-radius: 50%;
+  margin: auto;
+  top: auto;
+
+}
+
+#rocket-container{
+  z-index: 4001;
+  position: absolute;
+  top: 10px;
+  width: 512px;
+  height: 512px;
+}
+
+#rocket{
+  background: url('imgs/rocket.svg') no-repeat;
+  width: 512px;
+  height: 512px;
+  align-items: center;
+}
+
+#earth{
+  width: 100%;
+  height: calc(300%);
+  background: linear-gradient(to bottom,rgb(28,25,41), rgb(96,172,187) );
+  margin-top: -10px;
+  position: relative;
+}
+
+#nightSky{
+  z-index: -1;
+  width: calc(100%);
+  height: calc(300%);
+  background: url('imgs/star.svg'),
+              radial-gradient(circle, rgb(46,51,79), rgb(24,23,36));
+  position: relative;
+  background-size: calc(100%*1.5);
+  background-position: center;
+
+
+}
+
+#lostpilot{
+  background: url('imgs/lostrocketeer.svg') no-repeat;
+  position: absolute;
+}
+
+.flameballs{
+  background: url('imgs/flameball.svg') no-repeat;
+  position: absolute;
+  animation: shake 2s infinite;
+}
+
+.asteroids{
+  background: url('imgs/asteroid.svg') no-repeat;
+  position: absolute;
+  -webkit-animation: rotation 5s infinite;
+}
+
+#earthImage{
+  background: rgb(96,172,187);
+  z-index: 1004;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(360deg);
+		}
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate(-2px, 1px);
+  }
+  20%, 80% {
+    transform: translate(1px, 2px);
+  }
+  30%, 50%, 70% {
+    transform: translate(-1px, -2px);
+  }
+  40%, 60% {
+    transform: translate(1px, 1px);
+  }
+  100%{
+    transform: translate(1px, -1px);
+  }
+}

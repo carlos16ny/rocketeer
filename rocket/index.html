@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Rocket Launch</title>
+
+	<script src="../libraries/p5.js"></script>
+	<script src="../libraries/p5.dom.js"></script>
+	<script src="../libraries/p5.sound.js"></script>
+	<script src="sketch.js"></script>
+	<script src="back.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+	<link href="style.css" type="text/css" rel="stylesheet"/>
+
+</head>
+<body>
+	<button id="click">Click Aqui</button>
+
+	<div id='rocket-container'>
+		<div id='rocket'></div>
+	</div>
+
+	<div id=corpo>
+
+		<div id='point1' class='spot'>
+			<div class='pointc'></div>
+		</div>
+		<div id='point2' class='spot'>
+			<div class='pointc'></div>
+		</div>
+		<div id='point3' class='spot'>
+			<div class='pointc'></div>
+		</div>
+		<div id='point4' class='spot'>
+			<div class='pointc'></div>
+		</div>
+		<div id='point5' class='spot'>
+			<div class='pointc'></div>
+		</div>
+		<div id='point6' class='spot'>
+			<div class='pointc'></div>
+		</div>
+
+		<script>
+
+		var i=1;
+		$(document).ready(function (){
+				$("#click").click(function (){
+						$('#corpo').animate({
+								scrollTop: $("#point"+i).offset().top
+						}, 3000);
+						i++;
+				});
+		});
+		</script>
+
+		<div id="nightSky">
+			<div id='lostpilot'></div>
+			<div id="asteroidGroup">
+				<span id="asteroid1" class="asteroids"></span>
+				<span id="asteroid2" class="asteroids"></span>
+				<span id="asteroid3" class="asteroids"></span>
+				<span id="asteroid4" class="asteroids"></span>
+				<span id="asteroid5" class="asteroids"></span>
+				<span id="asteroid6" class="asteroids"></span>
+				<span id="asteroid7" class="asteroids"></span>
+				<span id="asteroid8" class="asteroids"></span>
+				<span id="asteroid9" class="asteroids"></span>
+				<span id="asteroid10" class="asteroids"></span>
+				<span id="asteroid11" class="asteroids"></span>
+				<span id="asteroid12" class="asteroids"></span>
+				<span id="asteroid13" class="asteroids"></span>
+				<span id="asteroid14" class="asteroids"></span>
+				<span id="asteroid15" class="asteroids"></span>
+				<span id="asteroid16" class="asteroids"></span>
+			</div>
+			<div id="flameballsGroup">
+				<span id="flameball1" class="flameballs"></span>
+				<span id="flameball2" class="flameballs"></span>
+				<span id="flameball3" class="flameballs"></span>
+				<span id="flameball4" class="flameballs"></span>
+				<span id="flameball5" class="flameballs"></span>
+				<span id="flameball6" class="flameballs"></span>
+				<span id="flameball7" class="flameballs"></span>
+				<span id="flameball8" class="flameballs"></span>
+				<span id="flameball9" class="flameballs"></span>
+				<span id="flameball10" class="flameballs"></span>
+				<span id="flameball11" class="flameballs"></span>
+				<span id="flameball12" class="flameballs"></span>
+				<span id="flameball13" class="flameballs"></span>
+				<span id="flameball14" class="flameballs"></span>
+				<span id="flameball15" class="flameballs"></span>
+				<span id="flameball16" class="flameballs"></span>
+			</div>
+		</div>
+
+		<div id="earth">
+			<div id='earthImage'></div>
+			</div>
+		</div>
+
+		<div id="middle-earth">
+			<div class="clouds">
+				<span class="cloud"></span>
+				<span class="cloud"></span>
+				<span class="cloud"></span>
+				<span class="cloud"></span>
+				<span class="cloud"></span>
+			</div>
+		</div>
+
+		<div id="ground"></div>
+	</div>
+</body>
+</html>

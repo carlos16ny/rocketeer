@@ -26,45 +26,6 @@ body, html {
 
 }
 
-#middle-earth{
-  position: relative;
-  height: 100%;
-  height: 300%;
-  background: black;
-}
-.clouds{
-  width: inherit;
-  height: inherit;
-}
-
-.cloud{
-  background: url('imgs/cloud.svg') no-repeat;
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  transform: scale(10);
-}
-
-.spot{
-  border-radius: 50%;
-  background: white;
-  z-index: 2001;
-  position: absolute;
-  margin: 0;
-  padding: 0;
-}
-
-.pointc{
-  width: 10px;
-  height: 10px;
-  position: relative;
-  background: black;
-  border-radius: 50%;
-  margin: auto;
-  top: auto;
-
-}
-
 #rocket-container{
   z-index: 4001;
   position: absolute;
@@ -78,14 +39,22 @@ body, html {
   width: 512px;
   height: 512px;
   align-items: center;
+  top: inherit;
 }
 
 #earth{
   width: 100%;
   height: calc(300%);
-  background: linear-gradient(to bottom,rgb(28,25,41), rgb(96,172,187) );
+  background: linear-gradient(to bottom,rgb(28,25,41), rgb(7, 136, 223) );
   margin-top: -10px;
   position: relative;
+}
+
+#ground{
+  width: 100%;
+  height: calc(300%);
+  position: relative;
+  background: linear-gradient(to bottom, rgb(7, 136, 223), rgb(96,172,187), rgb(250, 253, 56) );
 }
 
 #nightSky{
@@ -98,12 +67,115 @@ body, html {
   background-size: calc(100%*1.5);
   background-position: center;
 
-
 }
 
 #lostpilot{
   background: url('imgs/lostrocketeer.svg') no-repeat;
   position: absolute;
+}
+
+#earthImage{
+  /* background: rgb(96,172,187); */
+  background: url('imgs/earth2.svg');
+  z-index: 1004;
+  border-radius: 50%;
+  background-position: center;
+  width: max-content;
+  background-size: 120%;
+  position: absolute;
+}
+
+#canvasAviao{
+  top: calc(66%);
+}
+
+#mountain{
+  background: url('imgs/mountain.svg');
+  transform: scale(4);
+  position: absolute;
+  background-position: center;
+}
+
+#balloon{
+  background: url("imgs/balloon.svg") no-repeat;
+  width: 300px;
+  height: 490px;
+  background-position: center;
+  background-size: 150%;
+  animation: shake 3s infinite;
+  position: absolute;
+
+}
+
+#sun{
+  background: url("imgs/sun.svg")no-repeat;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  left: calc(50% - 250px);
+  background-position: center;
+  transform: scale(1);
+  top: calc(95% - 500px);
+  animation: rotation 10s infinite;
+  position: absolute;
+
+}
+
+#rainbow{
+  background: url("imgs/raibow.svg") no-repeat;
+  width: 100%;
+  height: 80%;
+  position: absolute; 
+  background-position: center;
+  transform: scale(1.2);
+  top: 100px;
+}
+
+
+.clouds{
+  width: 100%;
+  top: 40%;
+  position: absolute;
+}
+
+.cloud{
+  background: url('imgs/cloud.svg') no-repeat;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  z-index: 3003;
+}
+
+.spot{
+  border-radius: 50%;
+  background: white;
+  z-index: 2001;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+.aviao{
+  background: url('imgs/aviao.png') no-repeat;
+  background-size: 50%;
+  background-position: left;
+  width: 620px;
+  height: 370px;
+  top: calc(80%);
+  left: -100px;
+  position: absolute;
+  animation: translateX 10s infinite;
+}
+
+.pointc{
+  width: 10px;
+  height: 10px;
+  position: relative;
+  background: black;
+  border-radius: 50%;
+  margin: auto;
+  top: auto;
+
 }
 
 .flameballs{
@@ -115,15 +187,10 @@ body, html {
 .asteroids{
   background: url('imgs/asteroid.svg') no-repeat;
   position: absolute;
-  -webkit-animation: rotation 5s infinite;
+  animation: rotation 5s infinite;
 }
 
-#earthImage{
-  background: rgb(96,172,187);
-  z-index: 1004;
-  border-radius: 50%;
-  position: absolute;
-}
+
 
 @-webkit-keyframes rotation {
 		from {
@@ -132,6 +199,15 @@ body, html {
 		to {
 				-webkit-transform: rotate(360deg);
 		}
+}
+
+@-webkit-keyframes translateX  {
+  from{
+    -webkit-transform: translateX(0px);
+  }
+  to{
+    -webkit-transform: translateX(calc(300%));
+  }
 }
 
 @keyframes shake {

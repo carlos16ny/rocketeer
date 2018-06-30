@@ -44,19 +44,15 @@
 		<div id='point6' class='spot'>
 			<div class='pointc'></div>
 		</div>
-
-		<script>
-
-		var i=1;
-		$(document).ready(function (){
-				$("#click").click(function (){
-						$('#corpo').animate({
-								scrollTop: $("#point"+i).offset().top
-						}, 3000);
-						i++;
-				});
-		});
-		</script>
+		<div id='point7' class='spot'>
+			<div class='pointc'></div>
+		</div>
+		<div id='point8' class='spot'>
+			<div class='pointc'></div>
+		</div>
+		<div id='point9' class='spot'>
+			<div class='pointc'></div>
+		</div>
 
 		<div id="nightSky">
 			<div id='lostpilot'></div>
@@ -100,20 +96,61 @@
 
 		<div id="earth">
 			<div id='earthImage'></div>
-			</div>
-		</div>
 
-		<div id="middle-earth">
 			<div class="clouds">
 				<span class="cloud"></span>
 				<span class="cloud"></span>
 				<span class="cloud"></span>
 				<span class="cloud"></span>
 				<span class="cloud"></span>
+				<span class="cloud"></span>
 			</div>
+
+			<span class="aviao" id="aviao"></span>
+
 		</div>
 
-		<div id="ground"></div>
+		<div id="ground">
+			<div id="rainbow"></div>
+			<div id="balloon"></div>
+			<div id="sun"></div>
+			<div id="mountain"></div>
+
+		</div>
+
+		<!-- <div id="canvasAviao"></div> -->
+
 	</div>
+
+	
+
+
+	<script>
+
+		var i = 1;
+		$(document).ready(function () {
+			$("#click").click(function () {
+				$('#corpo').animate({
+					scrollTop: $("#point" + i).offset().top - $('#rocket').offset().top - 20
+				}, 3000);
+				i++;
+			});
+		});
+
+		// $(document).ready(function (){
+		// 	function loop(){
+		// 		if($('#aviao').marginLeft == window.innerWidth){
+		// 			$('#aviao').marginLeft = -$('#aviao').width + 'px';
+		// 		}else{
+		// 			$('#aviao').animate({
+		// 				marginLeft: window.innerWidth + 'px',
+		// 				marginTop: '0px'
+		// 			}, 10000, function(){
+		// 				loop();
+		// 			})
+		// 		}
+		// 	}
+		// });
+	</script>
 </body>
 </html>

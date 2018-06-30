@@ -74,15 +74,26 @@ body, html {
   position: absolute;
 }
 
-#earthImage{
-  /* background: rgb(96,172,187); */
-  background: url('imgs/earth2.svg');
+#earthBall{
+  background: rgb(96,172,187);
   z-index: 1004;
   border-radius: 50%;
   background-position: center;
-  width: max-content;
-  background-size: 120%;
+  width: 100%;
   position: absolute;
+}
+
+#earthImage{
+  background: url("imgs/earth2.svg");
+  width:100%;
+  border-radius: 50%;
+  background-position: center;
+  position: absolute;
+  z-index: 1005;
+  background-size: 120%;
+  /* animation: translateX 10S infinite; */
+  animation: deslocateBack 7s infinite;
+
 }
 
 #canvasAviao{
@@ -225,5 +236,14 @@ body, html {
   }
   100%{
     transform: translate(1px, -1px);
+  }
+}
+
+@keyframes deslocateBack{
+  from{
+    background-position: 0%;
+  }
+  to{
+    background-position: 100%;
   }
 }

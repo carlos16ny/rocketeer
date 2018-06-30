@@ -1,6 +1,7 @@
 var asteroids;
 var flameballs;
 var earthImage;
+var erathImageReal;
 var pilot;
 var corpo;
 var spot;
@@ -26,7 +27,7 @@ function setup(){
 	mountain = select("#mountain");
 	asteroids = selectAll('.asteroids');
 	flameballs = selectAll('.flameballs');
-	earthImage = select('#earthImage');
+	earthImage = select('#earthBall');
 	pilot = select('#lostpilot');
 	corpo = select('#corpo');
 	spot = selectAll('.spot');
@@ -34,6 +35,7 @@ function setup(){
 	rocketContainer = select('#rocket-container');
 	rocket = select("#rocket");
 	cloud = selectAll('.cloud');
+	erathImageReal = select("#earthImage");
 
 	var sizeX = windowWidth;
 	var sizeY = windowHeight;
@@ -41,6 +43,8 @@ function setup(){
 	earthImage.style("width", '100%');
 	earthImage.style("height", sizeX + 'px');
 	earthImage.style("top", 0 - sizeX/2 + 'px');
+
+	erathImageReal.style("height", sizeX + 'px');
 
 	pilot.style("width", sizeX/5 + 'px');
 	pilot.style("height", sizeX/5 + 'px');

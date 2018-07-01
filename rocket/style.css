@@ -8,7 +8,6 @@ body, html {
 
 /* sky-color:
   #4C0A51 - #291038 radial
-
   rgb(40,70,244), rbg(0,141,244), rgb(255, 0, 49);
 */
 
@@ -21,7 +20,7 @@ body, html {
 
 #click{
   position: absolute;
-  z-index: 3001;
+  z-index: 5001;
   margin: 30px;
 
 }
@@ -160,7 +159,7 @@ body, html {
 .spot{
   border-radius: 50%;
   background: white;
-  z-index: 2001;
+  z-index: 4000;
   position: absolute;
   margin: 0;
   padding: 0;
@@ -201,9 +200,33 @@ body, html {
   animation: rotation 5s infinite;
 }
 
+#dialog-board{
+  position: absolute;
+  z-index: 4002;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.dialog{
+  position: absolute;
+  margin: auto;
+  left: calc(50% - 300px);
+  border-radius: 15px;
+  height: 400px;
+  width: 600px;
+  top: calc(50% - 200px);
+  background: linear-gradient(#291038, rgb(24,23,36));;
+  background-size: 150%;
+  background-position: center;
+  border: 3px solid white;
 
 
-@-webkit-keyframes rotation {
+}
+
+
+
+@keyframes rotation {
 		from {
 				-webkit-transform: rotate(0deg);
 		}
@@ -212,7 +235,7 @@ body, html {
 		}
 }
 
-@-webkit-keyframes translateX  {
+@keyframes translateX  {
   from{
     -webkit-transform: translateX(0px);
   }

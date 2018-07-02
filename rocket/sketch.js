@@ -12,7 +12,9 @@ var cloud;
 var mountain;
 var cloudX = [0.5, 1.8, 0.7, 3, 1.5, 3.4];
 var cloudY = [1, 1.5, 2.2, 1, 3, 2];
+var messages;
 
+var index = 0;
 
 function setup(){
 
@@ -36,6 +38,7 @@ function setup(){
 	rocket = select("#rocket");
 	cloud = selectAll('.cloud');
 	erathImageReal = select("#earthImage");
+	messages = selectAll(".dialog");
 
 	var sizeX = windowWidth;
 	var sizeY = windowHeight;
@@ -51,10 +54,16 @@ function setup(){
 	pilot.style("left", sizeY - 2*sizeX/5 + 'px');
 	pilot.style("transform", 'scale(4)');
 
-	rocketContainer.style("left", sizeX/2 - 512/2 + 'px');
-	rocketContainer.style("transform", 'scale(' + 500/sizeX);
+	rocketContainer.style("left", sizeX/2 - rocketContainer.width/2 + 'px');
+	rocketContainer.style("top", sizeY/2 - rocketContainer.height/2 + 'px');
+	rocketContainer.style("transform", "scale(" + rocketContainer.height / sizeY / 1.5 + ")");
+	if(sizeY<800){
+		rocketContainer.style("transform", "scale(" + rocketContainer.height / sizeY / 3 + ")");
+	}
 
-	rocket.style("left", sizeY/5/5  + 'px');
+
+	rocket.style("left", sizeX/2 - rocket.width/2  + 'px');
+	rocket.style("top", sizeY/2 - rocket.height/2 + 'px');
 
 	mountain.style("width", sizeX + 'px');
 	mountain.style("height", sizeY/2 + "px");
@@ -62,7 +71,7 @@ function setup(){
 
 
 	for(var i=0; i<spot.length; ++i){
-		spot[i].style("top", sizeY*(i+1)-sizeX/15 - 10 + 'px');
+		spot[i].style("top", sizeY*(i+1) - sizeY/2 - sizeX/15/2 - 10 + 'px');
 		spot[i].style("width", sizeX/15 + 'px');
 		spot[i].style("height", sizeX/15 + 'px');
 		spot[i].style("left", sizeX/2 - sizeX/15/2 + 'px' );
@@ -93,5 +102,19 @@ function setup(){
 		cloud[i].style("top", sizeY*2 / 4 * cloudY[i] + "px");
         cloud[i].style("left", sizeX / 4 * cloudX[i] + "px");
 	}
+
+}
+
+
+function keyPressed(){
+
+	$("#dialog-" + index).hide(2000);
+	$("#corpo").delay(2000).animate({
+		scrollTop: windowHeight * index  + 'px' 
+	}, 3000);
+	index++;
+	$("#dialog-" + index).delay(6000).slideToggle(2000);	
+
+
 
 }

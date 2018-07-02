@@ -21,13 +21,55 @@
 	<button id="click">Click Aqui</button>
 	
 	<div id="dialog-board">
-		<div id="dialog-1" class="dialog"></div>
-		<div id="dialog-2" class="dialog"></div>
-		<div id="dialog-3" class="dialog"></div>
-		<div id="dialog-4" class="dialog"></div>
-		<div id="dialog-5" class="dialog"></div>
-		<div id="dialog-6" class="dialog"></div>
-		<div id="dialog-7" class="dialog"></div>
+		<div id="dialog-1" class="dialog">
+			<p class="text-dialog">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+			Necessitatibus ipsum minima officia repelat nobis sequi dolorem eligendi 
+			fuga veritatis? Temporibus consequuntur quod suscipit quisquam minus facere?
+			 Quis esse deserunt aliquam
+			</p>
+		</div>
+		<div id="dialog-2" class="dialog">
+			<p class="text-dialog">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+			Necessitatibus ipsum minima officia repelat nobis sequi dolorem eligendi 
+			fuga veritatis? Temporibus consequuntur quod suscipit quisquam minus facere?
+			 Quis esse deserunt aliquam
+			</p>
+		</div>
+		<div id="dialog-3" class="dialog">
+			<p class="text-dialog">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+			Necessitatibus ipsum minima officia repelat nobis sequi dolorem eligendi 
+			fuga veritatis? Temporibus consequuntur quod suscipit quisquam minus facere?
+			 Quis esse deserunt aliquam
+			</p>
+		</div>
+		<div id="dialog-4" class="dialog">
+			<p class="text-dialog">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+			Necessitatibus ipsum minima officia repelat nobis sequi dolorem eligendi 
+			fuga veritatis? Temporibus consequuntur quod suscipit quisquam minus facere?
+			 Quis esse deserunt aliquam
+			</p>
+		</div>
+		<div id="dialog-5" class="dialog">
+			<p class="text-dialog">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+			Necessitatibus ipsum minima officia repelat nobis sequi dolorem eligendi 
+			fuga veritatis? Temporibus consequuntur quod suscipit quisquam minus facere?
+			 Quis esse deserunt aliquam
+			</p>
+		</div>
+		<div id="dialog-6" class="dialog">
+			<p class="text-dialog">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+			Necessitatibus ipsum minima officia repelat nobis sequi dolorem eligendi 
+			fuga veritatis? Temporibus consequuntur quod suscipit quisquam minus facere?
+			 Quis esse deserunt aliquam
+			</p>
+		</div>
+		<div id="dialog-7" class="dialog">
+			<p class="text-dialog">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+			Necessitatibus ipsum minima officia repelat nobis sequi dolorem eligendi 
+			fuga veritatis? Temporibus consequuntur quod suscipit quisquam minus facere?
+			 Quis esse deserunt aliquam
+			</p>
+		</div>
 	</div>
 
 	<div id='rocket-container'>
@@ -130,8 +172,6 @@
 
 		</div>
 
-		<!-- <div id="canvasAviao"></div> -->
-
 	</div>
 
 	
@@ -143,7 +183,7 @@
 		$(document).ready(function () {
 			$("#click").click(function () {
 				$('#corpo').animate({
-					scrollTop: $("#point" + i).offset().top - $('#rocket').offset().top - 20
+					scrollTo: $("#point" + i).offset()
 				}, 3000);
 				i++;
 			});
